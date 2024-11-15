@@ -11,6 +11,9 @@ class Vehicle(ABC):
     def stop_engine(self):
         pass
 
+
+v = Vehicle()
+
 # Kelas turunan yang mengimplementasikan metode abstrak
 class Car(Vehicle):
     

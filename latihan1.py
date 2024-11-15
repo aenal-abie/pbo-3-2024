@@ -33,7 +33,9 @@ class ListPendaftaran:
                 print(f"No Antrian: {pendaftaran.no_antrian}, Nama Pasien: {pendaftaran.pasien.nama}, JK: {pendaftaran.pasien.jk}, Tanggal Daftar: {pendaftaran.tgl_daftar}")
 
 # Contoh penggunaan
-pasien1 = Pasien(1, "Budi",  "123456789")
+e = 10
+pasien1 = Pasien()
+a = 10
 pasien2 = Pasien(2, "Siti",  "987654321")
 pasien1.jk = "L";
 

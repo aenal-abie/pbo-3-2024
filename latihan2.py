@@ -16,6 +16,9 @@ class Pasien(User):
         
         
 class Dokter(User):
+    def aaa(self, a, d):
+        pass
+
     def __init__(self, id, nama, jk, spesialisasi,):
         self.spesialisasi = spesialisasi
         self.id = 10
@@ -29,7 +32,8 @@ class Dokter(User):
     
     
 
-pasien1 = Pasien(12211,  "Budi", "L")
+pasien1 = Pasien()
+e=1
 dokter1 = Dokter(10,"dr. Budi", "L", "Anak")
 
 print(pasien1.jk)
