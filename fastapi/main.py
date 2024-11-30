@@ -1,11 +1,12 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from nilai import nilai_router
-
+from barang import router
 
 app = FastAPI()
 
 app.include_router(nilai_router)
+app.include_router(router)
 
 
 @app.post("/")
