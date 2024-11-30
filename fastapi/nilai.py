@@ -18,9 +18,25 @@ async def hitung_nilai_akhir(nilai: NilaiMahasiswa):
         (nilai.nilai_uts * 0.3) +
         (nilai.nilai_uas * 0.5)
     )
+
+    grade = "E"
+    if(nilai_akhir >= 80):
+        grade = "A"
+    elif (nilai_akhir>=75):
+        grade = "B+"
+    elif (nilai_akhir>=70):
+        grade = "B"
+    elif (nilai_akhir>=60):
+        grade = "C+"
+    elif (nilai_akhir>=50):
+        grade = "C"
+    elif (nilai_akhir>=30):
+        grade = "D"
+
     return {
         "nilai_harian": nilai.nilai_harian,
         "nilai_uts": nilai.nilai_uts,
         "nilai_uas": nilai.nilai_uas,
-        "nilai_akhir": round(nilai_akhir, 2)
+        "nilai_akhir": round(nilai_akhir, 2),
+        "grade": grade
     }

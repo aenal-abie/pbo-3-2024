@@ -1,0 +1,5 @@
+POST http://127.0.0.1:8000/hitung-nilai-akhir/ HTTP/1.1
+Content-Type: application/json
+
+Accept: application/json
+{"nilai_harian": 90,"nilai_uts": 70,"nilai_uas": 40}
