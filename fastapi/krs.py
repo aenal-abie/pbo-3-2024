@@ -56,6 +56,7 @@ def process_krsan(data: Krsan):
     # Validasi mahasiswa
     if not any(m.nim == data.nim for m in mahasiswa):
         return {"error": "Mahasiswa tidak ditemukan"}
+    mhs = next((m for m in mahasiswa if m.nim == data.nim ), None)
 
     # Validasi mata kuliah
     invalid_mk = [kode for kode in data.mk if not any(mk.kode_mk == kode for mk in mks)]
@@ -64,7 +65,13 @@ def process_krsan(data: Krsan):
 
     # Tambahkan ke KRS
     for kode in data.mk:
-        krs.append(Krs(kode_mk=kode, nim=data.nim))
+        mk = next((p for p in mks if p.kode_mk == kode ), None)
+        krs.append(mk)
+        
+    hasil =  { 
+            "mahasiswa" : mhs,
+            "mk" : krs
+        }
 
-    return {"message": "KRSan berhasil diproses", "data": data}
+    return hasil
 
