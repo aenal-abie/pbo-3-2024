@@ -29,7 +29,6 @@ class Krsan(BaseModel):
     nim: str
     mk: List[str]
 
-# Data in-memory untuk simulasi database
 mks = [
     Mk(kode_mk="mk01", nama_mk="Algoritma", sks=3, semester_ke=1),
     Mk(kode_mk="mk02", nama_mk="Matematika", sks=2, semester_ke=1),
